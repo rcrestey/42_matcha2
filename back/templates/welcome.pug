@@ -1,0 +1,33 @@
+extends _layout.pug
+
+append style
+    style.
+        h2.welcome {
+            background: white;
+            padding: 20px 20px;
+            margin: 0;
+            text-align: center;
+            background: none;
+            margin: 0;
+        }
+        .confirm-button {
+            background: #2B6CB0;
+        }
+
+block head
+    h2.welcome.
+        Welcome #{username} !
+
+block content
+    row
+        column(style={ 'padding': '10px 20px' })
+            p
+                | Thank you for your registration on
+                |
+                span(style={ 'font-weight': 'bold' }) Meet a Celebrity
+                |.
+            p.
+                Let's talk with your favorite celebrities such as Brad Pitt or François Hollande !
+    row
+        column(style={ 'padding-bottom': '20px' })
+            button.confirm-button(href=signup_url) Go on

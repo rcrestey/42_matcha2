@@ -1,0 +1,136 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.font-title {
+    font-family: 'Saira', sans-serif;
+}
+
+:root {
+    --nav-bar--height: 56px;
+    --bottom-bar--height: 64px;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --bottom-bar--height: 0px;
+    }
+}
+
+.algolia-places-nostyle {
+    width: 100%;
+}
+.ap-nostyle-input,
+.ap-nostyle-hint {
+    width: 100%;
+    padding-right: 35px;
+    line-height: 40px;
+    height: 40px;
+    outline: none;
+    font: inherit;
+    appearance: none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+}
+.ap-nostyle-input::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+.ap-nostyle-input::-ms-clear {
+    display: none;
+}
+.ap-nostyle-input:hover ~ .ap-nostyle-input-icon svg,
+.ap-nostyle-input:focus ~ .ap-nostyle-input-icon svg,
+.ap-nostyle-input-icon:hover svg {
+    fill: #aaaaaa;
+}
+.ap-nostyle-dropdown-menu {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    margin-top: 3px;
+    overflow: hidden;
+}
+.ap-nostyle-suggestion {
+    /* added to fix issues */
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    height: 46px;
+    line-height: 46px;
+    padding-left: 18px;
+    overflow: hidden;
+}
+.ap-nostyle-suggestion em {
+    font-weight: bold;
+    font-style: normal;
+}
+.ap-nostyle-address {
+    font-size: smaller;
+    margin-left: 12px;
+    color: #aaaaaa;
+}
+.ap-nostyle-suggestion-icon {
+    margin-right: 10px;
+    width: 14px;
+    height: 20px;
+    vertical-align: middle;
+}
+.ap-nostyle-suggestion-icon svg {
+    -webkit-transform: scale(0.9) translateY(2px);
+    transform: scale(0.9) translateY(2px);
+    fill: #cfcfcf;
+}
+.ap-nostyle-input-icon {
+    border: 0;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    outline: none;
+}
+.ap-nostyle-input-icon.ap-icon-pin {
+    cursor: pointer;
+}
+.ap-nostyle-input-icon svg {
+    fill: #cfcfcf;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.ap-nostyle-cursor {
+    background: #efefef;
+}
+.ap-nostyle-cursor .ap-nostyle-suggestion-icon svg {
+    -webkit-transform: scale(1) translateY(2px);
+    transform: scale(1) translateY(2px);
+    fill: #aaaaaa;
+}
+.ap-nostyle-footer {
+    opacity: 0.8;
+    text-align: right;
+    padding: 0.5em 1em 0.5em 0;
+    font-size: 12px;
+    line-height: 12px;
+}
+.ap-nostyle-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+.ap-nostyle-footer a svg {
+    vertical-align: middle;
+}
+.ap-nostyle-footer:hover {
+    opacity: 1;
+}
+
+/* added to fix issues */
+.ap-name,
+.ap-address {
+    height: 100%;
+}

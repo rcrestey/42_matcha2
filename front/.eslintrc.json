@@ -1,0 +1,35 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended",
+        "prettier",
+        "prettier/react"
+    ],
+    "plugins": ["react", "import", "jsx-a11y", "react-hooks"],
+    "rules": {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/prop-types": "off"
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 2019,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true,
+        "serviceworker": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}
